@@ -18,7 +18,7 @@ pipeline {
         }
     stage ('Deploy') {
              steps {
-                sh 'scp  ${WORKSPACE}/java-sample-app/target/java-sample-app-1.0.0.war root@192.168.1.67:/opt/tomcat/apache-tomcat-9.0.26/webapps/'
+                sh 'scp  ${WORKSPACE}/java-sample-app/target/java-sample-app-1.0.0.war root@192.168.2.67:/opt/tomcat/apache-tomcat-9.0.26/webapps/'
 		 
             }
 	    
