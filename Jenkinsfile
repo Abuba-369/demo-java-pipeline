@@ -18,7 +18,7 @@ pipeline {
         }
     stage ('Deploy') {
              steps {
-               sh 'scp  ${WORKSPACE}/java-sample-app/target/java-sample-app-1.0.0.war root@192.168.43.222:/opt/tomcat/apache-tomcat-9.0.41/webapps/'
+               sh 'scp  ${WORKSPACE}/java-sample-app/target/java-sample-app-1.0.0.war root@192.168.0.11:/opt/tomcat/apache-tomcat-9.0.41/webapps/'
 	       // sh 'cd'		     
                // sh 'sudo cp -r {WORKSPACE}/test-pipeline/java-sample-app/target/java-sample-app-1.0.0.war /opt/tomcat/tomcat-9.0.30/webapps/'		     
 	       // sh 'sudo cp -r /var/lib/jenkins/workspace/test-pipeline/java-sample-app/target/java-sample-app-1.0.0.war /opt/tomcat/tomcat-9.0.30/webapps/'		      
